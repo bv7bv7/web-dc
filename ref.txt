@@ -1,0 +1,83 @@
+Errors and values for DCClient, send from Server to Client by Cookie:
+	ac             - SL3 operations Accounted (x.0.24)
+	pc             - SL3 operations Prev Payment (x.0.24)
+	am             - $ - Accounted
+	ba[x]          - Type of Server № x (>= x.0.25)
+	bb[x]          - Name of Server № x (>= x.0.25)
+	bc[x]          - URL of Server № x (>= x.0.25)
+	c              - Version of List of Servers (>= x.0.25)
+	d              - Other Message (>= x.0.25)
+	e              - $ - Price for 1 GH/s/24 (>= x.0.25)
+	g              - MH - Prev Payment (>= x.0.25)
+	h              - MH - Accounted (>= x.0.25)
+	r              - Result:
+		0	err_success  No error.
+		1	err_unknow   Unknown error
+		2	err_outdated The client is outdated.
+		3	err_nothing  Doing nothing.
+		4	err_timeout  Server busy, try again later.
+		5	err_auth     Autorization not success.
+		6	err_reg      Need registration.
+	f              - Select not last part of job. This cookie return from clreq.php to clres.php
+	si             - Subjob ID. This cookie return from clreq.php to clres.php
+	o[p - x.0.24]  - Operation - ID
+	pa[r - x.0.24] - Parameters of operation
+	pm             - $ - Prev Payment
+	up	- Server of updates
+		http://[Server Address]/DCClient[$v0]0[$v2]x[$v3].zip
+	j	- Server of updates
+		http://[Server Address]/DCClient[$v0]0[$v2]x[$v3].zip
+
+States
+	0	st_uncheck `jobs`.`st`,...
+	1	st_runs    `jobs`.`st`,...
+	2	st_hidden  `jobs`.`st`,...
+	3	st_closed  `jobs`.`st`,...
+	4	st_del     `jobs`.`st`,...
+	5	st_pause   `jobs`.`st`
+
+Roles
+	1	rl_client
+	2	rl_customer
+	4	rl_moder
+	8	rl_admin
+	16	rl_status
+	
+pw_len 15
+
+SL3
+	sl3_pw_len = 15
+	sep_sl3    = "-"
+	id_sl3     = 0
+
+$_SERVER['HTTP_USER_AGENT'] from DCClient to Server:
+	DCClient[$v0]0[$v3][$v3]
+		where:
+			$v0 - 2..4   - Major Version of DCClient
+			$v2 - 00..99 - Build Version of DCClient
+			$v3 - 32, 64 - Platform of DCClient
+	DCClientO
+		3.0.24 (1.0.24) - version of DCClient
+	DCClient0O
+		2.0.24 (1.0.24 lite) - version of DCClient
+
+$_POST from DCClient to Server:
+	a                - Password (clreg.php)(Temps Average - 2-3.0.24)
+	b                - Fans Max (delim - "z")
+	c                - Fans Average (delim - "z")
+	d                - Version of a List of Servers on the DCClient
+	e                - Email
+	f                - Utils Max (delim - "z")
+	g                - Utils Average (delim - "z")
+	h (a - 2-3.0.24) - Temps Average (delim - "z")
+	i                - ID
+	j                - MH/s
+	m                - Temps Max (delim - "z")
+		[Temp0]z[Temp1]z...[Temp7]
+	s (x.0.24)       - KOperations/sec. 
+	 
+mySQL
+	usrs
+		time    - Time of last select/result of job
+		time_ai - Time of last request to server
+		 
