@@ -1,0 +1,1 @@
+tbody>tr:not([class])>td:nth-child(4),tbody>tr:not([class])>td:nth-child(5),tbody>tr:not([class])>td:nth-child(7),tbody>tr:not([class])>td:nth-child(8),tbody>tr:not([class])>td:nth-child(9),.n>td:nth-child(3),.n>td:nth-child(4),.n>td:nth-child(6),.n>td:nth-child(7),.n>td:nth-child(8){text-align:right;}

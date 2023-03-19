@@ -1,0 +1,23 @@
+.c1e{position:absolute;border:3px groove blue;padding:5px;background:aqua;border-radius:4px;}
+.ctrl2e{border:3px groove blue;padding:5px;background:aqua;border-radius:4px;}
+.c2v1{font-weight:bold;}
+.c2v2{text-decoration:line-through;}
+a:empty:before{content:"\2026";}
+tr:hover td{border-color:red;background:#B0E0E6;}
+thead,tr.total,tr.header{background:#DCDCDC;font-weight:bold;text-align:center;}
+td:empty:before{content:"\0000a0";}
+.c4m{position:fixed;width:30px;height:30px;top:5%;right:5%;border:1px groove black;background:gray;text-align:center;border-radius:20px;opacity:0.5;}
+.c4m:before{content:"\2026";}
+.c4m div{display:none;}
+.c4m:hover{width:auto;height:auto;padding:10px;text-align:right;opacity:1;}
+.c4m:hover:before{content:" ";}
+.c4m:hover div{display:block;}
+.c4m div a{border:3px groove blue;padding:3px;background:aqua;border-radius:4px;text-decoration:none;}
+.mhs0,.red{color:red;}
+.mhs1,.blue{color:blue;}
+.mhs2{color:green;}
+.temp0{color:black;}
+.temp1{color:green;font-weight:bold;}
+.temp2{color:blue;font-weight:bold;font-size:large;}
+.temp3{color:red;font-weight:bold;font-size:x-large;}
+.temp0:before,.temp1:before,.temp2:before,.temp3:before{content:"\0000a0";}

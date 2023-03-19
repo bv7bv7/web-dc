@@ -1,0 +1,9 @@
+.c10{position:relative;cursor: pointer}
+.c10:hover{z-index:2;}
+.c10>a,.c10>div{border:outset aqua;margin:4px;background:aqua;}
+.c10e,.c10>div>table>tbody>tr>td>table>tbody>tr>td:hover{border:1px solid red;}
+.c10>div>table>tbody>tr>td>table>tbody>tr>td{border:1px solid aqua;}
+.c10>a:hover{border:inset yellow;background:yellow;}
+.c10h{color:Gray;}
+.c10>div{position:absolute;box-shadow:5px 5px 10px 10px;left:0px;z-index:1}
+.c10>div>table>tbody>tr>td>table{width:100%;text-align:center;}
